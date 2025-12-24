@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Particle Christmas Tree 3D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@400;700;900&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cursor-cane: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><defs><pattern id='stripes' patternUnits='userSpaceOnUse' width='10' height='10' patternTransform='rotate(45)'><rect width='10' height='10' fill='white'/><rect width='5' height='10' fill='%23e11d48'/></pattern></defs><path d='M12 40 L12 18 C12 10 18 6 26 6 C32 6 36 10 36 16 L36 20' stroke='url(%23stripes)' stroke-width='8' fill='none' stroke-linecap='round'/><path d='M8 24 L16 24 M12 20 L12 28' stroke='none' fill='none'/><g transform='translate(12, 22)'><path d='M-6 -2 Q-10 -8 -2 -4 L0 0 L2 -4 Q10 -8 6 -2 Q4 4 0 0 Q-4 4 -6 -2' fill='%23ef4444' stroke='white' stroke-width='0.5'/><circle cx='0' cy='0' r='1.5' fill='%237f1d1d'/></g></svg>") 12 18, auto;
+        
+        --cursor-cane-active: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><defs><pattern id='stripes-active' patternUnits='userSpaceOnUse' width='10' height='10' patternTransform='rotate(45)'><rect width='10' height='10' fill='white'/><rect width='5' height='10' fill='%23e11d48'/></pattern><filter id='glow'><feGaussianBlur stdDeviation='1.5' result='coloredBlur'/><feMerge><feMergeNode in='coloredBlur'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs><path d='M12 40 L12 18 C12 10 18 6 26 6 C32 6 36 10 36 16 L36 20' stroke='url(%23stripes-active)' stroke-width='8' fill='none' stroke-linecap='round' filter='url(%23glow)'/><g transform='translate(12, 22)'><path d='M-6 -2 Q-10 -8 -2 -4 L0 0 L2 -4 Q10 -8 6 -2 Q4 4 0 0 Q-4 4 -6 -2' fill='%23fbbf24' stroke='white' stroke-width='0.5'/><circle cx='0' cy='0' r='1.5' fill='%2392400e'/></g><circle cx='36' cy='8' r='2' fill='%23fbbf24'><animate attributeName='opacity' values='1;0;1' dur='1s' repeatCount='indefinite'/></circle><circle cx='10' cy='10' r='1.5' fill='%23fbbf24'><animate attributeName='opacity' values='0;1;0' dur='1.2s' repeatCount='indefinite'/></circle></svg>") 12 18, auto;
+      }
+
+      body { 
+        margin: 0; 
+        overflow: hidden; 
+        background-color: #000; 
+        font-family: 'Montserrat', sans-serif;
+        cursor: var(--cursor-cane);
+      }
+      
+      .font-magic { font-family: 'Pinyon Script', cursive; }
+      .font-brush { font-family: 'Nanum Brush Script', cursive; }
+      canvas { display: block; }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      /* Active state for cursor */
+      body:active {
+        cursor: var(--cursor-cane-active);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.4.2",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "@react-three/postprocessing": "https://esm.sh/@react-three/postprocessing@^3.0.4",
+    "three": "https://esm.sh/three@^0.182.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
